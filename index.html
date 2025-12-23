@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小宥的私廚｜用一口美味，治癒你的日常</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+/* ========================================
+   基本設定 (維持原本樣式)
+   ======================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Sans TC', sans-serif; line-height: 1.8; color: #2d3748; background-color: #ffffff; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* ========================================
+   導覽列
+   ======================================== */
+.navbar { position: fixed; top: 0; left: 0; right: 0; background: #ffffff; padding: 15px 30px; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.nav-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 900; color: #2d3748; text-decoration: none; display: flex; align-items: center; }
+.nav-menu { display: flex; gap: 30px; list-style: none; }
+.nav-menu a { color: #2d3748; text-decoration: none; font-weight: 500; }
+.nav-menu a:hover { color: #d69e2e; /* 改成暖色系 */ }
+
+/* ========================================
+   區塊通用樣式
+   ======================================== */
+section { padding: 100px 20px; }
+.section-title { text-align: center; margin-bottom: 50px; }
+.section-title h2 { font-size: 2.5rem; font-weight: 700; color: #2d3748; margin-bottom: 10px; }
+.section-title p { color: #718096; font-size: 1.1rem; }
+
+/* ========================================
+   Hero 區塊 (修改背景色調為暖色系以符合餐飲)
+   ======================================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* 這裡建議換成一張好看的食物照片作為 img1.jpg */
+    background: linear-gradient(135deg, rgba(45, 55, 72, 0.7), rgba(26, 32, 44, 0.7)), url('img1.jpg') center/cover;
+    color: white;
+    padding-top: 80px;
+}
+.hero h1 { font-size: 3.5rem; font-weight: 900; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+.hero p { font-size: 1.5rem; opacity: 0.95; margin-bottom: 30px; font-weight: 500; }
+
+/* ========================================
+   按鈕樣式
+   ======================================== */
+.btn { display: inline-block; padding: 15px 35px; background: white; color: #d69e2e; text-decoration: none; border-radius: 50px; font-weight: 600; transition: all 0.3s; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); background: #fefcbf; }
+
+/* ========================================
+   卡片樣式
+   ======================================== */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: all 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
+.card h3 { font-size: 1.4rem; margin-bottom: 10px; color: #2d3748; }
+.card p { color: #718096; }
+
+/* ========================================
+   頁尾
+   ======================================== */
+.footer { background: #1a202c; color: white; padding: 40px 20px; text-align: center; }
+.footer-social { display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; }
+.footer-social a { width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; transition: all 0.3s; }
+.footer-social a:hover { background: #d69e2e; transform: translateY(-3px); }
+
+/* ========================================
+   響應式設計
+   ======================================== */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .nav-menu { display: none; } /* 手機版暫時隱藏選單 */
+    section { padding: 60px 20px; }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+                小宥的私廚
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#hero">首頁</a></li>
+                <li><a href="#about">品牌故事</a></li>
+                <li><a href="#services">美味服務</a></li>
+                <li><a href="#portfolio">招牌菜色</a></li>
+                <li><a href="#contact">訂位資訊</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>生活的苦，讓美味來補</h1>
+            <p>在繁忙的城市角落，為你留一個品味生活的座位</p>
+            <a href="#about" class="btn">探索美味</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>關於 小宥的私廚</h2>
+                <p>Story of Us</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: center;">
+                <img src="img2.jpg" alt="關於我們" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px;">從一份對食材的熱愛開始</h3>
+                    <p style="font-size: 1.1rem; line-height: 2; margin-bottom: 20px;">
+                        我們深信，最好的調味料是「時間」與「心意」。當初創立小宥的私廚，是因為我們想把這份純粹帶入每個人的日常。
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 2;">
+                        每一道料理都經過慢火細熬，不只是商品，更是一份對品質的承諾。在這裡，不只是吃飯，更是一場感官的放鬆旅程。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background: #fffbf0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>我們的服務</h2>
+                <p>我們提供的不只是食物，更是體驗</p>
+            </div>
+            <div class="card-grid">
+                <div class="card" style="text-align: center;">
+                    <img src="img3.jpg" alt="精緻套餐" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+                    <h3>主廚精緻套餐</h3>
+                    <p>嚴選當季食材，依據時令調整菜單，呈現食物最鮮美的原味。</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <img src="img4.jpg" alt="手工甜點" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+                    <h3>每日手作甜點</h3>
+                    <p>減糖配方、不添加人工香精，每一口都是療癒的幸福滋味。</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <img src="img5.jpg" alt="包場服務" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+                    <h3>私人包場/外燴</h3>
+                    <p>無論是生日派對或商務聚餐，我們為您量身打造專屬菜單。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>靈魂人物</h2>
+                <p>用心烹調每一道料理</p>
+            </div>
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); max-width: 700px; margin: 0 auto;">
+                <div class="card" style="text-align: center;">
+                    <img src="img6.jpg" alt="小宥" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin: 0 auto 15px;">
+                    <h3>小宥</h3>
+                    <p style="color: #d69e2e; font-weight:bold;">行政主廚</p>
+                    <p style="font-size: 0.9rem; margin-top:10px;">「料理是與人對話的語言。」</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <img src="img7.jpg" alt="店長" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; margin: 0 auto 15px;">
+                    <h3>Emily</h3>
+                    <p style="color: #d69e2e; font-weight:bold;">營運經理</p>
+                    <p style="font-size: 0.9rem; margin-top:10px;">致力於提供最溫暖的服務體驗。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" style="background: #fffbf0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>本季招牌菜色</h2>
+                <p>客人好評推薦</p>
+            </div>
+            <div class="card-grid">
+                <div class="card" style="overflow: hidden; padding: 0;">
+                    <img src="img8.jpg" alt="慢燉紅酒燉牛肉" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 20px;">
+                        <h3>慢燉紅酒燉牛肉</h3>
+                        <p>歷時 48 小時熬煮，入口即化的經典美味。</p>
+                    </div>
+                </div>
+                <div class="card" style="overflow: hidden; padding: 0;">
+                    <img src="img9.jpg" alt="松露野菇燉飯" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 20px;">
+                        <h3>松露野菇燉飯</h3>
+                        <p>選用義大利進口米芯，濃郁香氣令人難以忘懷。</p>
+                    </div>
+                </div>
+                <div class="card" style="overflow: hidden; padding: 0;">
+                    <img src="img10.jpg" alt="海鹽焦糖乳酪蛋糕" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 20px;">
+                        <h3>海鹽焦糖乳酪蛋糕</h3>
+                        <p>鹹甜交織的完美平衡，是餐後最完美的句點。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>聯絡我們 / 訂位</h2>
+                <p>期待您的光臨</p>
+            </div>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto; background: #f7fafc; padding: 40px; border-radius: 15px;">
+                <p style="font-size: 1.2rem; margin-bottom: 20px;"><i class="fa-solid fa-phone" style="color:#d69e2e; margin-right:10px;"></i> 預約專線：(02) 1234-5678</p>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;"><i class="fa-solid fa-location-dot" style="color:#d69e2e; margin-right:10px;"></i> 地址：台北市信義區美味路 100 號</p>
+                <p style="font-size: 1.2rem;"><i class="fa-regular fa-clock" style="color:#d69e2e; margin-right:10px;"></i> 營業時間：11:00 - 21:00 (週一公休)</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://youtu.be/JtxxpqbApn4?si=EPZ_HqiGyhvebAnd" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://youtu.be/TY0FWgCce2E?si=dDLIPlkp4FGwy4_E" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://youtu.be/IWB0xk9lR88?si=4anNx-Sb2DNdIzDb" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <p>© 2025 小宥的私廚. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
